@@ -1,0 +1,41 @@
+const startBtn1 = document.querySelector('#start1');
+const resetBtn1 = document.querySelector('#reset1');
+const timer = document.querySelector('#timer');
+
+let index = "";
+let s = 60;
+let m = 2;
+
+const start1 = () => {
+    timer.classList.toggle('true');
+    if (timer.classList.contains('true')) {
+        index = setInterval(() => {
+            s--;
+            if (s == 0) {
+                s = 59;
+                s--;
+            };
+            if (s < 10) s = "0" + s;
+            timer.textContent = `${m}:${s}`;
+        }, 10)
+        startBtn1.textContent = "Pause";
+    }
+    else {
+        clearInterval(index);
+        startBtn1.textContent = "Start";
+        const li = document.createElement('li');
+        li.textContent = `${m}:${s}`;
+        document.querySelector('#lapTime').appendChild(li);
+    };
+}
+
+const reset = () => {
+    stoper.textContent = '2:00';
+    s = 00;
+    m = 2;
+    clearInterval(index);
+    stoper.classList.remove('true');
+    document.querySelector('#lapTime').textContent = "";
+}
+startBtn1.addEventListener('click', start);
+resetBtn1.addEventListener('click', reset);

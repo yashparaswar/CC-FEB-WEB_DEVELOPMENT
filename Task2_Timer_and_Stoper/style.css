@@ -1,0 +1,40 @@
+* {
+  background-color: rgb(224, 202, 245);
+
+}
+
+
+
+h1 {
+  text-align: center;
+}
+.lap{
+  text-decoration: solid,black;
+}
+
+section {
+  width: 220px;
+  margin: 0 auto;
+  align-items: center;
+}
+
+button {
+  margin: 5px;
+  width: 100px;
+  height: 50px;
+  background-color: aquamarine;
+  box-shadow: 0 0 4px 1px aquamarine;
+}
+
+#stoper {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px;
+  font-family: monospace;
+}
+#timer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 25px;
+  font-family: monospace;
+}
